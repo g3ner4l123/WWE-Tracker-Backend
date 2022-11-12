@@ -1,0 +1,32 @@
+plugins {
+	id 'org.springframework.boot' version '2.7.3'
+	id 'io.spring.dependency-management' version '1.0.13.RELEASE'
+	id 'java'
+}
+
+group = 'pkaiser'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation group: 'org.postgresql', name: 'postgresql', version: '42.2.24' 
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	runtimeOnly 'org.postgresql:postgresql'
+	runtimeOnly 'mysql:mysql-connector-java'
+	implementation group: 'org.modelmapper', name: 'modelmapper', version: '2.4.4'
+	testImplementation group: 'com.h2database', name: 'h2', version: '2.1.210'
+	implementation group: 'org.springframework', name: 'spring-jdbc', version: '5.3.16'
+	implementation 'com.vladmihalcea:hibernate-types-52:2.16.1'
+	
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
