@@ -1,10 +1,10 @@
-package pkaiser.wwetracker.singlematch;
+package pkaiser.wwetracker.titel;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+
 @Repository
-public interface SingleMatchRepo extends JpaRepository<SingleMatch, Long>{
-	
+public interface TitelRepo extends JpaRepository<TitelModel, Long>{
 
 }

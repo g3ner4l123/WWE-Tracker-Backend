@@ -1,9 +1,10 @@
-package pkaiser.wwetracker.specialmatch;
+package pkaiser.wwetracker.match;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface SpecialMatchRepo extends JpaRepository<SpecialMatch, Long>{
+public interface MatchRepo extends JpaRepository<MatchModel,Long>{
+	
 
 }

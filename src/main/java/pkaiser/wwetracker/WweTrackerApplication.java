@@ -11,6 +11,8 @@ import org.springframework.web.filter.CorsFilter;
 
 @SpringBootApplication
 public class WweTrackerApplication {
+	
+	public static String[] origins = new String[] {"http://localhost:4200"};
 
 	public static void main(String[] args) {
 		SpringApplication.run(WweTrackerApplication.class, args);
